@@ -34,6 +34,7 @@ The project compares HTTP and HTTPS traffic to demonstrate how TLS protects web 
 
 ## Architecture
 
+```test
 Plaintext
    |
    +--> AES-256-CBC Encryption
@@ -57,7 +58,7 @@ Apache Web Server
               |
               v
           Wireshark
-
+```
 The project demonstrates cryptographic protection of data and secure web communication. AES-256-CBC is used for symmetric encryption, while RSA-2048 with OAEP is used for asymmetric encryption. Apache is then accessed through HTTP and HTTPS, with Wireshark used to compare the resulting network traffic.
 
 ## Scenario 1 - Symmetric Encryption
