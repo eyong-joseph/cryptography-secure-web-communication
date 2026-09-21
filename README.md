@@ -212,3 +212,9 @@ The following evidence was captured during the practical laboratory exercises.
 - `12-wireshark-encrypted-data.png` — Encrypted TLS 1.3 application data
 
 ## Conclusion
+
+This project demonstrated practical applications of symmetric and asymmetric cryptography and showed how TLS can protect web communication.
+
+AES-256-CBC was used for symmetric encryption, while RSA-2048 with OAEP and SHA-256 was used for asymmetric encryption. Apache was then configured for HTTP and HTTPS, allowing Wireshark to demonstrate the difference between readable HTTP traffic and encrypted TLS 1.3 application data.
+
+The project provided practical experience with encryption, key management, SSL/TLS configuration, web-server security, and network traffic analysis in a controlled cybersecurity laboratory.
