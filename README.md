@@ -2,6 +2,12 @@
 
 ## Project Overview
 
+This project demonstrates practical applications of cryptography and secure web communication in a controlled Kali Linux laboratory environment.
+
+The project covers symmetric encryption using AES-256-CBC, asymmetric encryption using RSA-2048, deployment of an Apache web server, configuration of HTTPS using a self-signed X.509 certificate, and network traffic analysis using Wireshark.
+
+The project compares HTTP and HTTPS traffic to demonstrate how TLS protects web communication from being transmitted as readable application-layer data.
+
 ## Project Objectives
 
 ## Lab Environment
