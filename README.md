@@ -155,6 +155,18 @@ HTTPS uses TLS to provide confidentiality for HTTP communication. The Wireshark 
 
 ## HTTP vs HTTPS
 
+| Feature | HTTP | HTTPS |
+|---|---|---|
+| Protocol | HTTP | HTTP over TLS |
+| Default Port | 80 | 443 |
+| Encryption | No | Yes |
+| Confidentiality | Not provided | Provided through TLS |
+| Wireshark Application Data | Readable HTTP traffic | Encrypted TLS Application Data |
+| Certificate | Not required | Required for TLS |
+| Network Protection | Limited | Provides confidentiality through encryption |
+
+The Wireshark captures demonstrated the difference between the two protocols. HTTP traffic exposed identifiable HTTP requests and responses, while HTTPS traffic appeared as TLS 1.3 encrypted application data.
+
 ## Security Findings
 
 ## Lessons Learned
