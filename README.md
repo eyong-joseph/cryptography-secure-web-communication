@@ -62,6 +62,24 @@ The project demonstrates cryptographic protection of data and secure web communi
 
 ## Scenario 1 - Symmetric Encryption
 
+AES-256-CBC was used to demonstrate symmetric encryption and decryption.
+
+A plaintext file was encrypted using OpenSSL with AES-256-CBC, a unique salt, and PBKDF2 for password-based key derivation.
+
+```bash
+openssl enc -aes-256-cbc -salt -pbkdf2 -in plaintext.txt -out encrypted.txt
+```
+
+The encrypted file was then decrypted using the same cryptographic parameters:
+
+openssl enc -d -aes-256-cbc -pbkdf2 -in encrypted.txt -out decrypted.txt
+
+The recovered plaintext was compared with the original using cmp. The files were identical, confirming successful encryption and decryption.
+
+Key Security Concept
+
+AES provides symmetric encryption, meaning the same secret-derived key is used for encryption and decryption. PBKDF2 strengthens password-based key derivation by deriving cryptographic key material from the password using a salt and repeated computation.
+
 ## Scenario 2 - Asymmetric Encryption
 
 ## Scenarion 3 - HTTP Web Server
