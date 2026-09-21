@@ -1,4 +1,4 @@
-# Cryptography Fundamentals & Secure Web Cmmunication
+# Cryptography Fundamentals & Secure Web Communication
 
 ## Project Overview
 
@@ -108,7 +108,7 @@ Key Security Concept
 
 The public key can be shared for encryption, while the private key must remain confidential. RSA is generally used for relatively small amounts of data or as part of a hybrid cryptographic system rather than for encrypting large files directly.
 
-## Scenarion 3 - HTTP Web Server
+## Scenario 3 - HTTP Web Server
 
 Apache2 was deployed on the Kali Linux virtual machine to demonstrate basic HTTP communication.
 
