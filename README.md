@@ -129,6 +129,30 @@ HTTP does not provide encryption at the protocol level. The captured request and
 
 ## Scenario 4 - HTTPS and TLS
 
+HTTPS was configured on Apache using a self-signed X.509 SSL/TLS certificate generated with OpenSSL.
+
+The Apache SSL configuration was updated to use the generated certificate and private key. The configuration was validated successfully and Apache was restarted.
+
+The HTTPS connection was then accessed through the browser. Because the certificate was self-signed and not issued by a trusted Certificate Authority, the browser displayed a security warning. The certificate was accepted for this controlled laboratory environment.
+
+Wireshark was used to analyze the HTTPS connection. The TLS handshake was identified using:
+
+```text
+tls.handshake
+```
+The capture showed TLS 1.3 Client Hello and Server Hello messages
+
+The TLS application data was then isolated using:
+
+```bash
+tls.app_data && ip.src == 10.0.2.15 && ip.dst == 10.0.2.15
+```
+The resulting packets appeared as TLS 1.3 Application Data rather than readable HTTP requests or responses.
+
+Security Observation
+
+HTTPS uses TLS to provide confidentiality for HTTP communication. The Wireshark capture demonstrated that, unlike the HTTP traffic, the application data exchanged over HTTPS was not directly readable as HTTP content.
+
 ## HTTP vs HTTPS
 
 ## Security Findings
