@@ -178,6 +178,14 @@ The Wireshark captures demonstrated the difference between the two protocols. HT
 
 ## Lessons Learned
 
+- Symmetric encryption is efficient for protecting data when the required secret can be securely established.
+- Asymmetric encryption separates encryption and decryption roles through a public/private key pair.
+- RSA is appropriate for relatively small amounts of data; larger data sets are commonly protected using hybrid cryptographic approaches.
+- HTTPS uses TLS to protect HTTP communication rather than simply replacing HTTP with a different application protocol.
+- Wireshark can provide useful visibility into network protocols and demonstrate the difference between readable HTTP traffic and encrypted TLS traffic.
+- Certificate trust is important in secure web communication. Self-signed certificates are useful in controlled laboratories but are not automatically trusted by browsers.
+- Cryptographic private keys must be protected and should never be committed to a public GitHub repository.
+
 ## Evidence
 
 ## Conclusion
