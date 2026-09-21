@@ -82,6 +82,30 @@ AES provides symmetric encryption, meaning the same secret-derived key is used f
 
 ## Scenario 2 - Asymmetric Encryption
 
+RSA-2048 was used to demonstrate asymmetric encryption using a public/private key pair.
+
+The private key was generated first, and the corresponding public key was derived from it:
+
+```bash
+openssl genrsa -out private_key.pem 2048
+openssl rsa -in private_key.pem -pubout -out public_key.pem
+```
+
+A short plaintext message was encrypted using the public key with RSA-OAEP and SHA-256:
+
+openssl pkeyutl -encrypt -pubin -inkey public_key.pem \
+-in rsa_plaintext.txt \
+-out rsa_encrypted.bin \
+-pkeyopt rsa_padding_mode:oaep \
+-pkeyopt rsa_oaep_md:sha256 \
+-pkeyopt rsa_mgf1_md:sha256
+
+The encrypted message was then decrypted using the corresponding private key. The decrypted output was compared with the original plaintext, confirming successful RSA encryption and decryption.
+
+Key Security Concept
+
+The public key can be shared for encryption, while the private key must remain confidential. RSA is generally used for relatively small amounts of data or as part of a hybrid cryptographic system rather than for encrypting large files directly.
+
 ## Scenarion 3 - HTTP Web Server
 
 ## Scenario 4 - HTTPS and TLS
