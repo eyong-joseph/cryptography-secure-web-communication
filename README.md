@@ -110,6 +110,23 @@ The public key can be shared for encryption, while the private key must remain c
 
 ## Scenarion 3 - HTTP Web Server
 
+Apache2 was deployed on the Kali Linux virtual machine to demonstrate basic HTTP communication.
+
+The web server was installed and started using:
+
+```bash
+sudo apt update
+sudo apt install -y apache2
+sudo systemctl enable --now apache2
+```
+
+A custom HTML page was placed in Apache's default web directory and accessed through the server's IP address using HTTP.
+Wireshark was used to capture the traffic. The http display filter revealed an HTTP GET / request followed by an HTTP/1.1 200 OK response.
+
+Security Observation
+
+HTTP does not provide encryption at the protocol level. The captured request and response could therefore be identified directly in the network traffic.
+
 ## Scenario 4 - HTTPS and TLS
 
 ## HTTP vs HTTPS
