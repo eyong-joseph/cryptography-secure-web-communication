@@ -93,12 +93,14 @@ openssl rsa -in private_key.pem -pubout -out public_key.pem
 
 A short plaintext message was encrypted using the public key with RSA-OAEP and SHA-256:
 
+```bash
 openssl pkeyutl -encrypt -pubin -inkey public_key.pem \
 -in rsa_plaintext.txt \
 -out rsa_encrypted.bin \
 -pkeyopt rsa_padding_mode:oaep \
 -pkeyopt rsa_oaep_md:sha256 \
 -pkeyopt rsa_mgf1_md:sha256
+```
 
 The encrypted message was then decrypted using the corresponding private key. The decrypted output was compared with the original plaintext, confirming successful RSA encryption and decryption.
 
