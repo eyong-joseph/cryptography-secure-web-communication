@@ -19,6 +19,18 @@ The project compares HTTP and HTTPS traffic to demonstrate how TLS protects web 
 - Compare HTTP and HTTPS to demonstrate the security benefits of encrypted web communication.
 
 ## Lab Environment
+| Component | Configuration |
+|---|---|
+| Virtualization | Oracle VirtualBox |
+| Operating System | Kali Linux 2026.1 |
+| Web Server | Apache2 |
+| Cryptography Tool | OpenSSL |
+| Symmetric Algorithm | AES-256-CBC |
+| Key Derivation | PBKDF2 |
+| Asymmetric Algorithm | RSA-2048 |
+| Web Protocols | HTTP and HTTPS |
+| Certificate | Self-signed X.509 certificate |
+| Traffic Analysis | Wireshark |
 
 ## Architecture
 
