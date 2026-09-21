@@ -188,4 +188,27 @@ The Wireshark captures demonstrated the difference between the two protocols. HT
 
 ## Evidence
 
+The following evidence was captured during the practical laboratory exercises.
+
+### Symmetric Encryption
+- `01-aes-encryption.png` — AES-256-CBC encryption
+- `02-aes-successful-decryption.png` — Successful decryption and verification
+
+### Asymmetric Encryption
+- `03-rsa-private-key-generation.png` — RSA-2048 private key generation
+- `04-rsa-key-pair.png` — RSA public/private key pair
+- `05-rsa-encryption.png` — RSA encryption using the public key
+- `06-rsa-successful-decryption.png` — Successful RSA decryption and verification
+
+### HTTP
+- `07-http-web-page.png` — Apache web page accessed over HTTP
+- `08-wireshark-http-traffic.png` — HTTP traffic captured using Wireshark
+
+### HTTPS and TLS
+- `09-https-certificate-creation-1.png` — SSL/TLS certificate generation
+- `09-https-certificate-creation-2.png` — Certificate and key files
+- `10-https-browser-warning.png` — Self-signed certificate browser warning
+- `11-wireshark-tls-handshake.png` — TLS 1.3 handshake
+- `12-wireshark-encrypted-data.png` — Encrypted TLS 1.3 application data
+
 ## Conclusion
