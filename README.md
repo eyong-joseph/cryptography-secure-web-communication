@@ -169,6 +169,13 @@ The Wireshark captures demonstrated the difference between the two protocols. HT
 
 ## Security Findings
 
+- **Symmetric encryption:** AES-256-CBC successfully protected the plaintext data and allowed the original content to be recovered through the correct decryption process.
+- **Asymmetric encryption:** RSA-2048 demonstrated how a public key can be used for encryption while the corresponding private key is required for decryption.
+- **HTTP exposure:** Wireshark showed that HTTP requests and responses could be identified directly in captured traffic.
+- **HTTPS protection:** TLS 1.3 encrypted the application data exchanged during the HTTPS session, preventing the HTTP content from being directly viewed in the packet capture.
+- **Certificate trust:** The self-signed certificate provided encryption for the controlled laboratory environment but was not publicly trusted by the browser.
+- **Key protection:** Private cryptographic keys must remain confidential and should never be exposed or committed to a public repository.
+
 ## Lessons Learned
 
 ## Evidence
